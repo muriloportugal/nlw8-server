@@ -5,6 +5,12 @@ import { NodemailerMailAdapter } from './adapters/nodemailer/nodemailer-mail-ada
 
 export const routes = express.Router();
 
+routes.get('/',(req,resp)=>{
+  const retorno = {originReq: req.headers.origin,originAllow:process.env.CORS_ORIGIN};
+  console.log(retorno)
+  return resp.json(retorno);
+})
+
 routes.post('/feedbacks', async (req,resp)=>{
   const { type, comment, screenshot } = req.body;
   
