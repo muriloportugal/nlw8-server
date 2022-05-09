@@ -8,7 +8,7 @@ export const routes = express.Router();
 routes.get('/',(req,resp)=>{
   const retorno = {originReq: req.headers.origin,originAllow:process.env.CORS_ORIGIN};
   console.log(retorno)
-  return resp.json(retorno);
+  return resp.json({msg:"server ok"});
 })
 
 routes.post('/feedbacks', async (req,resp)=>{
