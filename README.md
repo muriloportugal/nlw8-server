@@ -11,7 +11,8 @@ Neste projeto criamos uma aplicação Widget para envios de feedback, além do c
 Esse widget pode ser adicionado em outros sites ou aplicativos e fica localizado no canto inferior direito.  
   
 - [Back-end](https://github.com/muriloportugal/nlw8-server) desta aplicação;  
-- [Front-end](https://github.com/muriloportugal/nlw-2020-web) desta aplicação;    
+- [Front-end](https://github.com/muriloportugal/nlw8-web) desta aplicação;  
+- [Mobile](https://github.com/muriloportugal/nlw8-mobile) desta aplicação;  
 
 
   
