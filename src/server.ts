@@ -3,11 +3,13 @@ import { routes } from './routes';
 import cors from 'cors';
 
 const app = express();
-
-app.use(cors({
-  origin: process.env.CORS_ORIGIN,
-}));
-app.use(express.json());
+const originsAllowed = process.env.CORS_ORIGIN || 'https://corsNotConfigured';
+const corsOptions: cors.CorsOptions = {
+  origin: originsAllowed.split(';'),
+  optionsSuccessStatus: 200,
+}
+app.use(cors(corsOptions));
+app.use(express.json({limit: '200mb' }));
 app.use(routes);
 
  
